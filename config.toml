@@ -1,0 +1,10 @@
+baseURL = "https://metacoder.de"
+languageCode = "de-de"
+title = "de.metacoder:blog"
+paginate = 5
+
+[markup.highlight]
+lineNos = true
+
+[taxonomies]
+author = "authors"

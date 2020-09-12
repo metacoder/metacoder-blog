@@ -1,0 +1,69 @@
+#header {
+	color: #FFF !important;
+}
+
+#header a {
+	color: #FFF;
+}
+
+#logoutLink {
+	position: absolute;
+	right: 0em;
+}
+
+#logo a {
+	text-decoration: none;
+}
+
+#blogPostPaginator {
+	border-top: 1px dotted #E1E1E1;
+	text-align: center !important;
+}
+
+hr {
+	border: 0;
+	border-top: 1px dotted #E1E1E1;
+}
+
+table {
+	border: 1px solid grey;
+	border-collapse: collapse;
+}
+
+td, th {
+	padding: 5px;
+}
+
+#main_inner .post p {
+	text-align: initial;
+}
+
+#main_inner .post .content ul {
+	margin-left: 2.0em;
+}
+
+div#main_inner .post ul.post_info li {
+	background-position: 0;
+}
+
+nav {
+	padding-top: 1em;
+}
+
+article {
+	margin-bottom: 2em;
+}
+
+div.highlight {
+	margin-bottom: 2em;
+}
+
+pre {
+	margin: 12px 0;
+}
+
+.highlight > pre code {
+	display: block;
+	padding: 12px;
+	overflow: auto;
+}

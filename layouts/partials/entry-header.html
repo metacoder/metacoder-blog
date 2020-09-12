@@ -1,0 +1,14 @@
+<ul class="post_info">
+    <li class="date">
+        Von:
+        <span>
+            {{- range .Params.authors -}}
+                <a href="{{ ($.Site.GetPage (printf "authors/%s" (urlize .))).RelPermalink }}">{{ . }}</a>
+            {{- end -}}
+        </span>
+        am <time datetime="{{ .Date.Format "2006-01-02T15:04:05Z07:00" | safeHTML }}">{{ .Date.Format "2006-01-02 15:04:05" }}</time>
+    </li>
+    <li class="readTime">
+        Lesezeit: {{ .ReadingTime }} min
+    </li>
+</ul>

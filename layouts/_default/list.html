@@ -1,0 +1,34 @@
+{{ define "main" }}
+    {{ $pages := where .RegularPages "Type" "in" .Site.Params.mainSections -}}
+    {{ if (eq .Kind "home") -}}
+        {{ $pages = where .Site.RegularPages "Type" "in" .Site.Params.mainSections -}}
+    {{ end -}}
+
+    {{ $paginator := .Paginate $pages -}}
+    {{ range $paginator.Pages -}}
+        <article class="post">
+            <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+
+            {{ partial "entry-header" . }}
+
+            <div class="content">
+                {{ .Content }}
+            </div>
+        </article>
+    {{ end -}}
+
+    {{ $pag := $.Paginator }}
+    <nav id="blogPostPaginator">
+        {{ if $pag.HasPrev -}}
+            <a href="{{ $pag.Prev.URL }}">&lt;&lt;</a>
+        {{ else -}}
+            &lt;&lt;
+        {{ end -}}
+        Seite {{ $pag.PageNumber }}
+        {{ if $pag.HasNext -}}
+            <a href="{{ $pag.Next.URL }}">&gt;&gt;</a>
+        {{ else -}}
+            &gt;&gt;
+        {{ end -}}
+    </nav>
+{{ end -}}

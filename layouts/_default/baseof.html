@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<!--
+    Nonzero1.0 by nodethirtythree design
+    http://www.nodethirtythree.com
+    missing in a maze
+-->
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <title>{{ .Title }}</title>
+        <link rel="stylesheet" href="{{ "css/blog.css" | relURL }}" media="screen">
+        <link rel="stylesheet" href="{{ "css/nonzero.css" | relURL }}" media="screen">
+        {{ with .OutputFormats.Get "rss" -}}
+        {{ printf `<link rel="%s" type="%s" href="%s" title="%s" />` .Rel .MediaType.Type .Permalink $.Site.Title | safeHTML }}
+        {{ end -}}
+    </head>
+    <body>
+        <div id="header">
+            <div id="header_inner" class="fixed">
+                <div id="logo">
+                    <h1><span><a href="{{ .Site.BaseURL }}">{{ .Site.Title }}</a></span></h1>
+                </div>
+            </div>
+        </div>
+
+        <div id="main">
+            <div id="main_inner" class="fixed">
+                {{- block "main" . }}{{- end }}
+            </div>
+        </div>
+
+        <div id="footer" class="fixed">
+            <p class="legal">
+                &copy;{{ now.Year }} metacoder.de
+                &nbsp;&nbsp;&bull;&nbsp;&nbsp;
+                Design by <a href="http://www.nodethirtythree.com/">NodeThirtyThree Design</a>
+            </p>
+        </div>
+    </body>
+</html>
