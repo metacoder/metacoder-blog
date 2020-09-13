@@ -10,9 +10,7 @@ Ich habe seit einiger Zeit Probleme mit Chromium auf Gentoo und der Fontdarstell
 
 Die Fonts "Verdana, Helvetica, Arial, sans-serif" (CSS) sahen in normaler Textgröße super aus, sobald aber die Font größer war (z.B. 20px font size), war die Font pixelig und verwaschen.
 
-<!-- edit by makubi: not loading
-<a href="http://afriserver.de/metacoder-fontbroken.png"><img src="http://afriserver.de/metacoder-fontbroken-250px.png" /></a>
--->
+[![](/posts/images/chromium-fontbroken-250px.png)](/posts/images/chromium-fontbroken.png)
 
 Um das Problem zu lösen, habe ich mir das Corefonts-Package mit
 
