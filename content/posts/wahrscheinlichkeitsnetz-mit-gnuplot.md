@@ -25,7 +25,3 @@ plot "..." using 1:(invnorm($2/100))
 ```
 
 Es empfiehlt sich die Legende links zu setzen, da sich im Idealfall die Messwerte von unten links nach oben rechts verteilen werden.
-
-Hier noch ein kleines Beispiel:
-
-{{< youtube KZ83MO5h9to >}}
